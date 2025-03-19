@@ -1,33 +1,45 @@
+import java.util.Scanner;
 
 /**
- * Write a description of class Game here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * The Game class manages the overall number-guessing game.
+ * The game consists of one or more rounds where the player tries to guess a secret number.
+ * The game continues until the player chooses to stop.
+ * 
+ * @author Daniel Lara
  */
 public class Game
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Game
-     */
+    private Scanner scan;
+    
+    // Initializes scan
     public Game()
     {
-        // initialise instance variables
-        x = 0;
+        scan = new Scanner(System.in);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public Game(Scanner s)
     {
-        // put your code here
-        return x + y;
+        scan = s;
+    }
+    
+    /**
+     * Returns the Scanner
+     * 
+     * @return The Scanner object
+     */    
+    public Scanner getScan()
+    {
+        return scan;
+    }
+    
+    /**
+     * Starts the game by creating a new round
+     * It continues until the player wins or quits
+     */
+    public void play()
+    {
+        Round round = new Round(scan);
+        round.play();
     }
 }
