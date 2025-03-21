@@ -90,18 +90,24 @@ public class Round
      */
     private int askForGuess()
     {
-        System.out.println("Enter a guess or enter -1 to quit: ");
-        int guess = scan.nextInt();
-        scan.nextLine();
+        boolean validGuess = false;
+        int guess = 0;
         
-        if(guess == -1)
+        while(!validGuess)
+        {
+            System.out.println("Guess a number or enter -1 to quit: ");
+            guess = scan.nextInt();
+            scan.nextLine();
+            
+            validGuess = Guess.checkGuess(guess);
+        }
+        
+        if(guess == -1) 
         {
             quit = true;
-        }
-        else {
+        } else {
             numGuesses++;
         }
-        
         return guess;
     }
     
@@ -115,7 +121,27 @@ public class Round
         if(g == secret)
         {
             win = true;
-        }    
+        } else{
+            int apples = Guess.countApples(g, secret);
+            int oranges = Guess.countOranges(g, secret);
+            printResults(apples, oranges);
+        }
+    }
+    
+    private void printResults(int apples, int oranges)
+    {
+        if(apples == 0 && oranges == 0)
+        {
+            System.out.println("nada");
+            return;
+        }
+        
+        for(int i = 0; i < apples; i++) {
+            System.out.println("apple ");
+        }
+        for(int i = 0; i < oranges; i++) {
+            System.out.println("orange ");
+        }
     }
     
     // Method to play the round
@@ -123,7 +149,7 @@ public class Round
     {
         while(!win && !quit)
         {
-            int guess = askForGuess();
+            int guess = askForGuess();            
             System.out.println("You guessed: " + guess);
             checkWin(guess);
         }
