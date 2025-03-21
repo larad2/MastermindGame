@@ -149,7 +149,9 @@ public class Round
     {
         while(!win && !quit)
         {
-            int guess = askForGuess();            
+            int guess = askForGuess();
+            if(quit) break;
+            
             System.out.println("You guessed: " + guess);
             checkWin(guess);
         }
