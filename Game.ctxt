@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Game
+comment0.text=\r\n\ The\ Game\ class\ manages\ the\ overall\ number-guessing\ game.\r\n\ The\ game\ consists\ of\ one\ or\ more\ rounds\ where\ the\ player\ tries\ to\ guess\ a\ secret\ number.\r\n\ The\ game\ continues\ until\ the\ player\ chooses\ to\ stop.\r\n\ \r\n\ @author\ Daniel\ Lara\r\n
+comment1.params=
+comment1.target=Game()
+comment2.params=s
+comment2.target=Game(java.util.Scanner)
+comment3.params=
+comment3.target=java.util.Scanner\ getScan()
+comment3.text=\r\n\ Returns\ the\ Scanner\r\n\ \r\n\ @return\ The\ Scanner\ object\r\n
+comment4.params=
+comment4.target=int\ getNumGuesses()
+comment5.params=
+comment5.target=int\ getNumRoundsWon()
+comment6.params=
+comment6.target=boolean\ getQuitGame()
+comment7.params=
+comment7.target=void\ playAgain()
+comment8.params=
+comment8.target=double\ getAverage()
+comment9.params=
+comment9.target=void\ play()
+comment9.text=\r\n\ Starts\ the\ game\ by\ creating\ a\ new\ round\r\n\ It\ continues\ until\ the\ player\ wins\ or\ quits\r\n
+numComments=10

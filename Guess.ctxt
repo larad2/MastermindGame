@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Guess
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Guess\ here.\r\n\r\n\ @author\ Daniel\ Lara\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=g
+comment1.target=boolean\ checkGuess(int)
+comment1.text=\r\n\ Checks\ if\ the\ guess\ is\ valid\ (5\ digits\ or\ -1)\r\n\ @param\ g\ The\ guessed\ number\r\n\ @return\ True\ if\ the\ guess\ is\ valid,\ otherwise\ false\r\n
+comment2.params=guess\ secret
+comment2.target=int\ countApples(int,\ int)
+comment3.params=guess\ secret
+comment3.target=int\ countOranges(int,\ int)
+numComments=4
